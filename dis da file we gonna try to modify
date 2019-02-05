@@ -1,17 +1,15 @@
 public class BankAccount{
 
-
-  //these two lines they are private instance variables that would be used throughout the code
   private double balance;
   private String accountNumber;
   private String accountHolder;
-  // this method returns a balnce as a double
   public double getBalance(){
+    // this method returns a balnce as a double
     return balance;
   }
 
-  // this method returns the account number as a string variable
   public String getAccountNumber(){
+    // this method returns the account number as a string variable
     return accountNumber;
   }
 
@@ -19,19 +17,19 @@ public class BankAccount{
     return accountHolder;
   }
 
-  //it returns the account number and the balance in string format
   public String toString(){
+    //it returns the account number and the balance in string format
     return accountNumber +  accountHolder + ": " + balance;
   }
 
-  // ensures that it adds a positive amount of cash to balance
   public void deposit(double cash){
+    // ensures that it adds a positive amount of cash to balance
     if (cash > 0.0)
       balance += cash;
   }
 
-  // ensures that the amount withdrawn is not greater then what is in the balance and that is is a positive number.
   public void withdraw(double cash){
+    // ensures that the amount withdrawn is not greater then what is in the balance and that is is a positive number.
     if ((cash > 0.0) && (cash <= balance) && (balance > 0.0))
       balance -= cash;
   }
@@ -44,21 +42,21 @@ public class BankAccount{
     else
       System.out.println("Enter a valid amount pretty please. ;)");
   }
-  //initialize with default balance but accountNumber as argument
   public BankAccount(){
+    //initialize with default balance but accountNumber as argument
     this.balance = 0.0;
     this.accountNumber = "8888";
     this.accountHolder = "whaddup";
   }
 
-  //initialize with default balance and accountNumber
   public BankAccount(double balance){
+    //initialize with default balance and accountNumber
     this.balance = balance;
     this.accountNumber = "8888";
   }
 
-  //initialize with balance and accountNumber as arguments
   public BankAccount(double balance, String accountNumber){
+    //initialize with balance and accountNumber as arguments
     this.balance = balance;
     this.accountNumber = accountNumber;
   }
