@@ -71,12 +71,7 @@ public class BankApp extends Application{
       }
     });
 
-    root.getChildren().add(depositBtn,withdrawBtn,balanceLbl,customerLbl,amountLbl,balanceTxf);
-    root.getChildren().add(withdrawBtn);
-    root.getChildren().add(balanceLbl);
-    root.getChildren().add(customerLbl);
-    root.getChildren().add(amountLbl);
-    root.getChildren().add(balanceTxf);
+    root.getChildren().addAll(depositBtn,withdrawBtn,balanceLbl,customerLbl,amountLbl,balanceTxf);
 
     Scene scene = new Scene(root, 400, 200);
     primaryStage.setTitle("Bank App");
