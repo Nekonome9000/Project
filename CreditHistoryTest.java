@@ -108,7 +108,8 @@ public class CreditHistoryTest {
 	}
 	
 	/**
-	 *
+	 * Tests mehod trimRatings arraylist has less then 10 integers
+	 * Should return the arraylist with no changes
 	 */
 	@Test
 	public void test_trim_get_ratings_lessThan10() {
@@ -131,7 +132,10 @@ public class CreditHistoryTest {
 	}
 
 	/**
-	 *
+	 * Tests method trimRatings arraylist inputed has more then 10 integers
+	 * Should return arraylist that trimed the first few arrays inputed
+	 * So that the final arraylist starts from the last integer it trimed 
+	 * In this case the array should start from 3
 	 */
 	@Test
 	public void test_trim_get_ratings_moreThan10() {
@@ -155,7 +159,10 @@ public class CreditHistoryTest {
 	}
 
 	/**
-	 *
+	 * Test method trimRating and method numOfRating
+	 * Inputs an arraylist with less then 10 integers
+	 * Should output a list with the amount of integers inputed 
+	 * In this case it would be a list of 7 integers
 	 */
 	@Test
 	public void test_trim_numOf_ratings_lessThan10() {
@@ -178,7 +185,9 @@ public class CreditHistoryTest {
 	}
 
 	/**
-	 *
+	 * Test Method trimRating and method numOfRating
+	 * Inputs an arraylist with more the 10 integers
+	 * Should output a list with 10 integers after the triming
 	 */
 	@Test
 	public void test_trim_numOf_ratings_moreThan10() {
