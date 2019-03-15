@@ -211,7 +211,9 @@ public class CreditHistoryTest {
 	}
 	
 	/**
-	 *
+	 * Test Methods creditRating
+	 * the test inputs an arraylist with odd integers less than 10
+	 * The list outputs the weighted average without trimming
 	 */
 	@Test 
 	public void test_creditRating_lessThan10_odd(){
@@ -235,7 +237,9 @@ public class CreditHistoryTest {
 	}
 	
 	/**
-	 *
+	 * Test Methods creditRating 
+	 * The test inputs an arraylist with odd integers more than 10
+	 * The list outputs the weighted average without trimming
 	 */
 	@Test 
 	public void test_creditRating_moreThan10_odd(){
@@ -259,7 +263,9 @@ public class CreditHistoryTest {
 	}
 
 	/**
-	 *
+	 * Test Methods creditRating
+	 * The test inputs an arraylist with even integers more than 10
+	 *  The list outputs the weighted average without trimming
 	 */
 	@Test 
 	public void test_creditRating_moreThan10_even(){
@@ -283,7 +289,9 @@ public class CreditHistoryTest {
 	}
 
 	/**
-	 *
+	 * Test Methods creditRating and trimRatings
+	 * The test inputs an arraylist with odd integers less than 10
+	 *  The list outputs the weighted average with trimming
 	 */
 	@Test 
 	public void test_trim_creditRating_lessThan10_odd(){
@@ -308,7 +316,9 @@ public class CreditHistoryTest {
 	}
 	
 	/**
-	 *
+	 * Test Methods creditRating and trimRatings
+	 * The test inputs an arraylist with odd integers more than 10
+	 * The list outputs the weighted average with trimming
 	 */
 	@Test 
 	public void test_trim_creditRating_moreThan10_odd(){
