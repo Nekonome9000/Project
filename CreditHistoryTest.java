@@ -4,8 +4,14 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
+/**
+ * Group #2
+ */ 
 public class CreditHistoryTest {
-	// boundaries
+	/**
+	 * Tests method 'addRating' that adds a valid number 0 into array list. 
+	 * Should return ArrayList containing 0.
+	 */
 	@Test
 	public void test_add_get_ratings_0() {
 		CreditHistory ch = new CreditHistory();
@@ -18,7 +24,10 @@ public class CreditHistoryTest {
 
 	}
 	
-	
+	/**
+	 * Tests method 'addRating' that adds a valid number -5 into array list. 
+	 * Should return ArrayList containing -5.
+	 */
 	@Test
 	public void test_add_get_ratings_lowerBound_neg5() {
 		CreditHistory ch = new CreditHistory();
@@ -30,7 +39,11 @@ public class CreditHistoryTest {
 			ch.getRatings());
 
 	}
-
+	
+	/**
+	 * Tests method 'addRating' that adds invalid number -6 into array list. 
+	 * Should return an empty ArrayList.
+	 */
 	@Test
 	public void test_add_get_ratings_lowerBound_neg6() {
 		CreditHistory ch = new CreditHistory();
@@ -42,7 +55,11 @@ public class CreditHistoryTest {
 			ch.getRatings());
 
 	}
-
+	
+	/**
+	 * Tests method 'addRating' that adds a valid number 5 to array list. 
+	 * Should return ArrayList containing 5.
+	 */
 	@Test
 	public void test_add_get_ratings_upperBound_5() {
 		CreditHistory ch = new CreditHistory();
@@ -54,7 +71,11 @@ public class CreditHistoryTest {
 			ch.getRatings());
 
 	}
-
+	
+	/**
+	 * Tests method 'addRating' that adds an invalid number 6 to array list. 
+	 * Expectations is to return empty ArrayList.
+	 */
 	@Test
 	public void test_add_get_ratings_upperBound_6() {
 		CreditHistory ch = new CreditHistory();
@@ -66,7 +87,11 @@ public class CreditHistoryTest {
 			ch.getRatings());
 
 	}
-
+	
+	/**
+	 * Tests method 'addRating' that adds valid numbers 0, -2, 5. 
+	 * Should return ArrayList containing [0, -2, 5].
+	 */
 	@Test
 	public void test_add_get_ratings_order() {
 		CreditHistory ch = new CreditHistory();
@@ -81,7 +106,10 @@ public class CreditHistoryTest {
 			ch.getRatings());
 
 	}
-
+	
+	/**
+	 *
+	 */
 	@Test
 	public void test_trim_get_ratings_lessThan10() {
 		CreditHistory ch = new CreditHistory();
@@ -102,6 +130,9 @@ public class CreditHistoryTest {
 
 	}
 
+	/**
+	 *
+	 */
 	@Test
 	public void test_trim_get_ratings_moreThan10() {
 		CreditHistory ch = new CreditHistory();
@@ -123,6 +154,9 @@ public class CreditHistoryTest {
 
 	}
 
+	/**
+	 *
+	 */
 	@Test
 	public void test_trim_numOf_ratings_lessThan10() {
 		CreditHistory ch = new CreditHistory();
@@ -143,6 +177,9 @@ public class CreditHistoryTest {
 
 	}
 
+	/**
+	 *
+	 */
 	@Test
 	public void test_trim_numOf_ratings_moreThan10() {
 		CreditHistory ch = new CreditHistory();
@@ -163,7 +200,10 @@ public class CreditHistoryTest {
 			10, ch.numOfRatings());
 
 	}
-
+	
+	/**
+	 *
+	 */
 	@Test 
 	public void test_creditRating_lessThan10_odd(){
 		CreditHistory ch = new CreditHistory();
@@ -183,7 +223,11 @@ public class CreditHistoryTest {
 		assertEquals("The weighted average without trimming",
 			sum/iList.size(), ch.getCreditRating(), 0.0001);
 
-	}	
+	}
+	
+	/**
+	 *
+	 */
 	@Test 
 	public void test_creditRating_moreThan10_odd(){
 		CreditHistory ch = new CreditHistory();
@@ -205,6 +249,9 @@ public class CreditHistoryTest {
 
 	}
 
+	/**
+	 *
+	 */
 	@Test 
 	public void test_creditRating_moreThan10_even(){
 		CreditHistory ch = new CreditHistory();
@@ -226,6 +273,9 @@ public class CreditHistoryTest {
 
 	}
 
+	/**
+	 *
+	 */
 	@Test 
 	public void test_trim_creditRating_lessThan10_odd(){
 		CreditHistory ch = new CreditHistory();
@@ -246,7 +296,11 @@ public class CreditHistoryTest {
 
 		assertEquals("The weighted average with trimming",
 			sum/iList.size(), ch.getCreditRating(), 0.0001);
-	}	
+	}
+	
+	/**
+	 *
+	 */
 	@Test 
 	public void test_trim_creditRating_moreThan10_odd(){
 		CreditHistory ch = new CreditHistory();
